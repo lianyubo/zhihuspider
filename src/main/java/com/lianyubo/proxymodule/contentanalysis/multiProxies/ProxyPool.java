@@ -1,14 +1,10 @@
 package com.lianyubo.proxymodule.contentanalysis.multiProxies;
 
 
-import com.lianyubo.proxymodule.entity.NoProxy;
-import com.lianyubo.proxymodule.entity.Proxy;
-
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
-import java.util.concurrent.DelayQueue;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 /**
@@ -35,10 +31,10 @@ public class ProxyPool {
         int pages = 4;
         for(int i = 1; i <= pages; i++){
 
-            proxyMap.put("http://www.xicidaili.com/wt/" + i + ".html", XiciListPageContentAnalysis.class);//国内HTTP代理
-            proxyMap.put("http://www.xicidaili.com/nn/" + i + ".html", XiciListPageContentAnalysis.class);//国内普通代理
-            proxyMap.put("http://www.xicidaili.com/wn/" + i + ".html", XiciListPageContentAnalysis.class);//国内HTTPS代理
-            proxyMap.put("http://www.xicidaili.com/nt/" + i + ".html", XiciListPageContentAnalysis.class);//国内高匿
+            proxyMap.put("http://www.xicidaili.com/wt/" + i + ".html", XiciListPageContentAnalysis.class);//国内HTTP代理页面
+            proxyMap.put("http://www.xicidaili.com/nn/" + i + ".html", XiciListPageContentAnalysis.class);//国内普通代理页面
+            proxyMap.put("http://www.xicidaili.com/wn/" + i + ".html", XiciListPageContentAnalysis.class);//国内HTTPS代理页面
+            proxyMap.put("http://www.xicidaili.com/nt/" + i + ".html", XiciListPageContentAnalysis.class);//国内高匿代理页面
             proxyMap.put("http://www.xicidaili.com/daili/" + i + ".html", IP66ListPageContentAnalysis.class);
 
             //66ip代理网站提供34个省市的代理，每个地区代理一页数据
@@ -46,7 +42,6 @@ public class ProxyPool {
                 proxyMap.put("http://www.66ip.cn/areaindex_" + j + "/" + i + ".html", IP66ListPageContentAnalysis.class);
             }
         }
-
         //proxyQueue.add(new NoProxy(TIME_INTERVAL));  //TIME_INTERVAL为单个ip请求间隔，单位ms
     }
 

@@ -1,6 +1,6 @@
 package com.lianyubo.proxymodule.contentanalysis.multiProxies;
 
-import com.lianyubo.proxymodule.entity.Proxy;
+import com.lianyubo.entity.Proxy;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -12,8 +12,9 @@ public class XiciListPageContentAnalysis implements ProxyListPageContentAnalysis
     @Override
     public List<Proxy> contentAnalysis(String hmtl) {
         Document document = Jsoup.parse(hmtl);
+
         //#ip_list > tbody > tr:nth-child(7) > td:nth-child(2)
-        Elements elements = document.select("#ip_list").select("tbody").select("#ip_list");
+        Elements elements = document.select("#ip_list").select("tbody").select("tr");
         List<Proxy> proxyList = new ArrayList<>(elements.size());
         for (Element element : elements){
             String ip = element.select("td:eq(1)").first().text();

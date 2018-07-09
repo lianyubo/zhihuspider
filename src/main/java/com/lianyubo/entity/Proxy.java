@@ -1,10 +1,6 @@
-package com.lianyubo.proxymodule.entity;
+package com.lianyubo.entity;
 
-import java.io.Serializable;
-import java.util.concurrent.Delayed;
-import java.util.concurrent.TimeUnit;
-
-public class Proxy  {
+public class Proxy {
 
     //任务时间间隔
     private long timeInterval;

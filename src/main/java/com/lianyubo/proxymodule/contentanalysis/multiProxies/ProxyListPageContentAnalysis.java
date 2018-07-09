@@ -1,6 +1,6 @@
 package com.lianyubo.proxymodule.contentanalysis.multiProxies;
 
-import com.lianyubo.proxymodule.entity.Proxy;
+import com.lianyubo.entity.Proxy;
 import com.lianyubo.zhihumodule.contentanalysis.ContentAnalysis;
 
 import java.util.List;

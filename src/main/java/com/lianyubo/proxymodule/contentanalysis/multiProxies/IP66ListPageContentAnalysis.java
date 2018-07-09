@@ -1,6 +1,6 @@
 package com.lianyubo.proxymodule.contentanalysis.multiProxies;
 
-import com.lianyubo.proxymodule.entity.Proxy;
+import com.lianyubo.entity.Proxy;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -27,7 +27,7 @@ public class IP66ListPageContentAnalysis implements ProxyListPageContentAnalysis
 
         //#footer > div > table > tbody > tr:nth-child(2) > td:nth-child(1)
         Elements elements = document.select("#footer").select("div").select("table")
-                .select("tbody").select("tr:nth-child(2)");
+                .select("tbody").select("tr");
         for (Element element : elements){
             String ip = element.select("td:nth-child(1)").first().text();
             String port  = element.select("td:nth-child(2)").first().text();
