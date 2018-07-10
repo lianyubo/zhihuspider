@@ -39,4 +39,5 @@ return proxyList;
 
  */
 public interface ContentAnalysis {
+
 }

@@ -71,8 +71,6 @@ public class Proxy {
     }
 
 
-
-
     public long getTimeInterval() {
         return timeInterval;
     }

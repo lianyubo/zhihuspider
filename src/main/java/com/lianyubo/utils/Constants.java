@@ -1,4 +1,4 @@
-package com.lianyubo.zhihumodule.utils;
+package com.lianyubo.utils;
 
 
 public class Constants {

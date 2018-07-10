@@ -1,6 +1,8 @@
 package com.lianyubo.proxymodule.contentanalysis.multiProxies;
 
 
+import com.lianyubo.entity.Proxy;
+
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
